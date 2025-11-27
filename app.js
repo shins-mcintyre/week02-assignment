@@ -22,18 +22,20 @@ const imageData = [
   },
 ];
 
+console.log(imageData.imageSrc);
 // STEP 2: Create thumbnail images (and store in container)=============
 
 function createThumbnails() {
   // select the dom element to contain the thumbnails
-  document.getElementById("thumbnail-container");
+  const thumbnailContainer = document.getElementById("thumbnail-container");
   // this is a repetitive task --> use a for loop(for, forEach...)
   // Loop task:
   for (let i = 0; i < imageData.length; i++) {
     // - create img element
-    const thumbnailImg = document.createElement("thumbnail-img");
+    const thumbnailImg = document.createElement("img");
 
     // update src and alt attributes(properties) of the img element to match those in the array (parameters)
+    // Q - is this how you attribute from the array?? Check the array workshop
     thumbnailImg.src = imageData.imageSrc;
     thumbnailImg.alt = imageData.imageAlt;
 
@@ -41,21 +43,22 @@ function createThumbnails() {
     thumbnailImg.className = imageData.imageName;
 
     // -add an event listener to each image to make them clickable --> the event handler of this event is the function you write to create the full screen images (STEP 3)
-    const clickBtn = document.createElement(".click-btn");
+    const clickBtn = document.createElement("click-btn");
     clickBtn.addEventListener("click", function () {
       // insert function from STEP 3 here
     });
-    document.body.appendChild(imageTitle);
     // - append created images to the thumbnail-container
+    thumbnailContainer.appendChild(thumbnailImg);
   }
 }
 
+console.log(thumbnailImg);
 // STEP 3: Create fullscreen images =====================================
 
 function createFullscreenImages() {
   // this is the event handler
   // select the fullscreen container
-  document.getElementById("thumbnail-container");
+  document.getElementById("fullscreen-container");
   // delete the current fullscreen image --> fullScreenContainer.innerHTML = null
   // create image
   // update it's values  (properties) - from the same array
