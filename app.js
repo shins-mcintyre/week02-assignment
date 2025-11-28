@@ -79,3 +79,11 @@ function createFullscreenImages(i) {
 // invoke / call the createThumbnails function
 
 createThumbnails();
+
+// make the first thumbnail image the background on load:
+// idea from chatGPT
+
+window.addEventListener("DOMContentLoaded", function () {
+  const openScreen = imageData[0].imageSrc;
+  fullScreenImg.src = imageData[1].imageSrc;
+});

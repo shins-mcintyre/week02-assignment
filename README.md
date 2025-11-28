@@ -39,3 +39,7 @@ I encountered a few errors and tricky bits with this. For instance, how to extra
 For styling and accessibility I based this initially on that of the example - I want to get the basics right, and only if I have time add my own flair
 
 Ran a speed test on lowest image qualities - 2000ms. I didn't like the quality of the fullscreen images. Exchanged them for the original medium quality to see what effect that had: this had no effect on speed so kept the med quality images
+
+On opening the page there was a blank screen - I wanted it to show the first image in the carousel so I set the background image of the site to be that - this may not be the most appropriate way to do this?
+
+One of the images used I realised after downloading is PNG - it looks nice but perhaps it's not the most appropriate file type?

@@ -6,6 +6,12 @@
   /* background-image: url("./images/hills.jpg"); */
 }
 
+body {
+  background-image: url("./images/hills2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 #thumbnail-container {
   height: 60px;
   width: auto;
