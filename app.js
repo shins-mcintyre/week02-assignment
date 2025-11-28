@@ -7,19 +7,19 @@ console.log("Hello");
 const imageData = [
   {
     imageName: "hill-image",
-    imageSrc: "./images/hills.jpg",
+    imageSrc: "./images/hills2.jpg",
     imageAlt: "Photograph of rugged green mountains",
     tabindex: "0",
   },
   {
     imageName: "mushroom-image",
-    imageSrc: "./images/shrooms.jpg",
+    imageSrc: "./images/shrooms2.jpg",
     imageAlt: "Photograph of mushrooms in forest",
     tabindex: "0",
   },
   {
     imageName: "bird-image",
-    imageSrc: "./images/birds.jpg",
+    imageSrc: "./images/birds2.png",
     imageAlt: "Photograph of colourful birds on branch",
     tabindex: "0",
   },

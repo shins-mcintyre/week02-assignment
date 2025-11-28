@@ -6,7 +6,6 @@
   /* background-image: url("./images/hills.jpg"); */
 }
 
-
 #thumbnail-container {
   height: 60px;
   width: auto;
@@ -53,7 +52,7 @@
 
 /* add media query so that if you look at it on a phone the thumbnails are in a column */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #thumbnail-container {
     flex-direction: column;
     height: auto;
@@ -62,3 +61,4 @@
     top: 50%;
     transform: translateY(-50%);
   }
+}
