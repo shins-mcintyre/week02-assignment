@@ -9,16 +9,19 @@ const imageData = [
     imageName: "hill-image",
     imageSrc: "./images/hills.jpg",
     imageAlt: "Photograph of rugged green mountains",
+    tabindex: "0",
   },
   {
     imageName: "mushroom-image",
     imageSrc: "./images/shrooms.jpg",
     imageAlt: "Photograph of mushrooms in forest",
+    tabindex: "0",
   },
   {
     imageName: "bird-image",
     imageSrc: "./images/birds.jpg",
     imageAlt: "Photograph of colourful birds on branch",
+    tabindex: "0",
   },
 ];
 
@@ -36,6 +39,7 @@ function createThumbnails(test) {
     // update src and alt attributes(properties) of the img element to match those in the array (parameters)
     thumbnailImg.src = imageData[i].imageSrc;
     thumbnailImg.alt = imageData[i].imageAlt;
+    thumbnailImg.tabindex = "0";
 
     // - give each img a className (img.className)
     thumbnailImg.className = "thumbnail-img";
