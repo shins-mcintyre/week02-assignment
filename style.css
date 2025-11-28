@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.thumbnail-img {
+  height: 5rem;
+}
+
+.fullscreen-img {
+  height: 10rem;
+}
