@@ -40,6 +40,6 @@ For styling and accessibility I based this initially on that of the example - I 
 
 Ran a speed test on lowest image qualities - 2000ms. I didn't like the quality of the fullscreen images. Exchanged them for the original medium quality to see what effect that had: this had no effect on speed so kept the med quality images
 
-On opening the page there was a blank screen - I wanted it to show the first image in the carousel so I set the background image of the site to be that - this may not be the most appropriate way to do this?
+On opening the page there was a blank screen - I wanted it to show the first image in the carousel. at first I set the background image of the site to be that - but that didn't work well as I couldn't give it the same properties as an image. I did ask chatGPT at that stage for advice on what to do, as I couldn't find resources online. The recommendation was to write in java script . From here i learned of the DOMContentLoaded - but I then applied similar code as I used in the previous functions to make this work and it will always apply to the first image in the array
 
 One of the images used I realised after downloading is PNG - it looks nice but perhaps it's not the most appropriate file type?

@@ -75,15 +75,20 @@ function createFullscreenImages(i) {
   fullScreenContainer.appendChild(fullScreenImg);
 }
 
-// add the createFullScreenImages function as the event handler of the event above
-// invoke / call the createThumbnails function
-
-createThumbnails();
-
-// make the first thumbnail image the background on load:
-// idea from chatGPT
-
-window.addEventListener("DOMContentLoaded", function () {
-  const openScreen = imageData[0].imageSrc;
-  fullScreenImg.src = imageData[1].imageSrc;
+// make the first thumbnail the image that loads initially
+document.addEventListener("DOMContentLoaded", function () {
+  // selecting full screen container so image uses same styles as full size images
+  const fullScreenContainer = document.getElementById("fullscreen-container");
+  // create an image element for the opening screen image
+  const openScreenImg = document.createElement("img");
+  // make the source of the open screen image the first thumbnail [0]
+  openScreenImg.src = imageData[0].imageSrc;
+  openScreenImg.alt = imageData[0].imageAlt;
+  openScreenImg.className = "fullscreen-img";
+  // tested - this works
+  console.log(openScreenImg.src);
+  fullScreenContainer.appendChild(openScreenImg);
 });
+
+// invoke / call the createThumbnails function
+createThumbnails();
