@@ -18,9 +18,27 @@ const imageData = [
     tabindex: "0",
   },
   {
-    imageName: "bird-image",
-    imageSrc: "./images/birds2.png",
+    imageName: "kingfisher-image",
+    imageSrc: "./images/kingfisher.png",
+    imageAlt: "Photograph of a Kingfisher bird eating a fish",
+    tabindex: "0",
+  },
+  {
+    imageName: "exotic-birds-image",
+    imageSrc: "./images/exotic.jpg",
     imageAlt: "Photograph of colourful birds on branch",
+    tabindex: "0",
+  },
+  {
+    imageName: "hummingbird-image",
+    imageSrc: "./images/hummingbird.jpg",
+    imageAlt: "Photograph of a hummingbird hovering next to a flower",
+    tabindex: "0",
+  },
+  {
+    imageName: "puffin-image",
+    imageSrc: "./images/puffin.jpg",
+    imageAlt: "Photograph of a Puffin bird on a cliff",
     tabindex: "0",
   },
 ];
@@ -73,6 +91,7 @@ function createFullscreenImages(i) {
   fullScreenImg.className = "fullscreen-img";
   // append image to the container
   fullScreenContainer.appendChild(fullScreenImg);
+  currentImage = i;
 }
 
 // make the first thumbnail the image that loads initially
@@ -92,3 +111,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // invoke / call the createThumbnails function
 createThumbnails();
+
+// Add buttons:
+
+let currentImage = 0;
+
+const nextButton = document.getElementById("next");
+
+const prevButton = document.getElementById("prev");
+
+nextButton.addEventListener("click", function () {
+  currentImage = (currentImage + 1) % imageData.length;
+  createFullscreenImages(currentImage);
+});
+
+prevButton.addEventListener("click", function () {
+  currentImage = (currentImage - 1 + imageData.length) % imageData.length;
+  createFullscreenImages(currentImage);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  createFullscreenImages(0); // show the first image on load
+});
+
+// add keyboard navigation
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") {
+    currentImage = (currentImage + 1) % imageData.length;
+    createFullscreenImages(currentImage);
+  }
+  if (event.key === "ArrowLeft") {
+    currentImage = (currentImage - 1 + imageData.length) % imageData.length;
+    createFullscreenImages(currentImage);
+  }
+});

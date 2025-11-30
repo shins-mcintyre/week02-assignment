@@ -43,3 +43,18 @@ Ran a speed test on lowest image qualities - 2000ms. I didn't like the quality o
 On opening the page there was a blank screen - I wanted it to show the first image in the carousel. at first I set the background image of the site to be that - but that didn't work well as I couldn't give it the same properties as an image. I did ask chatGPT at that stage for advice on what to do, as I couldn't find resources online. The recommendation was to write in java script . From here i learned of the DOMContentLoaded - but I then applied similar code as I used in the previous functions to make this work and it will always apply to the first image in the array
 
 One of the images used I realised after downloading is PNG - it looks nice but perhaps it's not the most appropriate file type?
+
+Accessibility:
+Lighthouse score 92 - 100 for accessibility, 96 for best practice, 91 for SEO
+WAVE: only alerts were no heading structrue and no page regions, which is not so relevant here since the page has no text at all
+Web insights recommendatio add aria labels so will add as a stretch goal if time allows
+
+For adding navigation to the buttons, I did use chatGPT to ask a few questions on what I was doing/why it wasn't working. I got a little explanation of why to write the code as I did:
+
+_What this does
+(currentIndex + 1) % imageData.length;
+moves forward (and wraps from last → first)
+(currentIndex - 1 + imageData.length) % imageData.length;
+moves backward (and wraps from first → last)_
+
+I then used this code to make it navigatable using arrow keys and the tab key. however I realised the tab key is actually for navigating the whole page so I changed that
